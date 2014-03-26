@@ -1,0 +1,36 @@
+{layout ./base.latte}
+
+{block #title}
+    {$event->title}
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink Admin:participation}">Správa docházky</a> 
+    / {$event->title}
+{/block}
+
+{block #adminContent}
+&laquo;<i>{$event->event_type_title}</i> &raquo; 
+<h2>Editace docházky události "{$event->title}"</h2>
+
+<div style="float:left">
+<legend><i>Info</i></legend>
+	    {$event->description}
+	    <strong>{$event->take_place_from|date:"G:i d.m.Y"}</strong> - <strong>{$event->take_place_to|date:"G:i d.m.Y"}</strong></br>
+	    Potvrdit do: {$event->confirm_until|date:"G:i d.m.Y"}</br>
+</div>
+
+{control eventParticipation:participated}
+{control eventParticipation:admin}
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:participation}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}

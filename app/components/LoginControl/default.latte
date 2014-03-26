@@ -1,0 +1,22 @@
+<div class="menu">
+    {if $loggedIn}
+    <ul>
+	<li class="user"><a href="{plink User:default}">{$name} {$surname} (<strong>{$id}</strong>)</a>{control userMenu}</li>
+	{if $messagesMenu}
+	    <li class="mail"><a href="{plink User:messageBox}">{$pmsCount}</a>{control mailMenu}</li>
+	{/if}
+	<li class="web"><a href="{plink Homepage:default}">Profil</a></li>
+	<li class="club"><a href="{plink Club:default}">Klub</a>{control clubMenu}</li>
+	{if $adminMenuPredicate}
+	    <li class="admin"><a href="{plink Admin:default}">Admin</a>{control adminMenu}</li>
+	{/if}
+
+    </ul>
+</div>
+    {else}
+    <ul>
+	<li>Uživatel <strong>není přihlášen</strong></li>
+	<li class="user"><a href="{plink $link_target}" title="{$link_label}">{$link_text}</a></li>
+    </ul>
+</div>
+    {/if}

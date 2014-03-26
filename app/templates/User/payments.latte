@@ -1,0 +1,16 @@
+{layout ./base.latte}
+{block #title}Platby | {include #parent}{/block}
+{block #breadcrumbs} / Platby{/block}
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+            <li class="title">/ Možnosti</li>
+            <li><a href="{plink User:default}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #userContent}
+<h2>Platby</h2>
+{control userPaymentsGrid}
+{/block}

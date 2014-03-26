@@ -1,0 +1,25 @@
+{layout base.latte}
+{block #title}
+    Profily ke schválení 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Profily ke schválení
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+{block #adminContent}
+    <h2>Profily ke schválení</h2>
+    {control permitGrid}
+{/block}
+

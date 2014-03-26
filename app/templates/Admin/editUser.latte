@@ -1,0 +1,39 @@
+{layout base.latte}
+{block #title}
+    Uprav uživatele 
+    | Správa uživatelů
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent}
+    / <a href="{plink Admin:users}">Správa uživatelů</a>
+    / Úprava uživatele
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:users}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Úprava uživatele</h2>
+    {control editUserForm}
+
+    <h2>Platby uživatele</h2>
+    {control userPaymentsControl}
+
+    <h2>Objednávky uživatele</h2>
+    {control userOrdersControl}
+
+    <h2>Události uživatele</h2>
+    {control userEvents}
+
+    <h2>Kredity uživatele</h2>
+    {control userCredits:subtotal}
+    {control userCredits}
+{/block}

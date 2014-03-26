@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://api.dibiphp.com/2.0/sitemap.xml

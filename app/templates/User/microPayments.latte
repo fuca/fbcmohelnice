@@ -1,0 +1,17 @@
+{layout ./base.latte}
+{block #title}Moje mikroplatby | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Přehled mikroplateb{/block}
+
+{block #subMenu}
+    <div class="submenu">
+            <ul>
+                    <li class="title">/ Možnosti</li>
+                    <li><a href="{plink User:default}">Zpět</a></li>
+            </ul>
+    </div>
+{/block}
+
+{block #userContent}
+<h2>Mikroplatby</h2>
+{control microPaymentsGrid}
+{/block}

@@ -1,0 +1,26 @@
+{layout ./base.latte}
+{block #title}
+    {$data->title|truncate:50}
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ {$data->title}
+{/block}
+
+{block #articlesContent}
+<h2>{$data->title}</h2>
+
+<img src="{$basePath}/img/articles/{$data->picture}" alt="article-{$data->id_article}-picture"/>
+
+<p>{$data->content}</p>
+
+{if $comments}
+	{control articleComments}
+	{control articleComments:form}
+{else}
+	Komentáře k tomuto článku nejsou povoleny
+{/if}
+
+{/block}

@@ -1,0 +1,15 @@
+
+<h3>Aktivita</h3>
+{if count($data) != 0}
+    {foreach $data as $d}
+	<fieldset>
+	<p style="color:{if $d->participation == 1}green{else}red{/if}">
+	    
+	    <strong>{$d->name}</strong> <i>{$d->ordered_time|date:"G:i d.m.Y"}</i></br>
+	    {$d->comment}
+	</p>
+	</fieldset>
+    {/foreach}
+{else}
+    Žádná aktivita nebyla doposud zaznamenána
+{/if}

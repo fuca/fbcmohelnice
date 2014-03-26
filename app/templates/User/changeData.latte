@@ -1,0 +1,24 @@
+{layout ./base.latte}
+{block #title}Změna údajů | {include #parent}{/block}
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink User:data}">Moje údaje</a> 
+    / Změna údajů
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+            <ul>
+                    <li class="title">/ Možnosti</li>
+                    <li><a href="{plink User:data}">Zpět</a></li>
+            </ul>
+    </div>
+{/block}
+
+{block #userContent}
+<h2>Změna údajů</h2>
+{control editUserDataForm}
+{/block}
+
+
+

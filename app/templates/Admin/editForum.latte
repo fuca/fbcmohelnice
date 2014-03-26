@@ -1,0 +1,26 @@
+{layout base.latte}
+{block #title}
+    Úprava fóra
+    | Správa fór
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent}
+    / <a href="{plink Admin:forums}">Správa fór</a>
+    / Úprava fóra
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:forums}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Úprava fóra</h2>
+    {control editForumForm}
+{/block}

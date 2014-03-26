@@ -1,0 +1,30 @@
+{layout base.latte}
+{block #title}
+    Správa událostí 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ Správa událostí
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $addPermit}
+		    <li><a href="{plink Admin:addEvent}">Přidat událost</a></li>
+		{/if}
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+
+
+{block #adminContent}
+    <h2>Správa událostí</h2>
+    {control adminEventsGrid}
+{/block}
+

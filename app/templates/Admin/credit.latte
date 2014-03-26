@@ -1,0 +1,26 @@
+{layout base.latte}
+{block #title}
+    Správa kreditů 
+    | {include #parent}
+{/block}
+{block #breadcrumbs}
+    {include #parent} 
+    / Správa kreditů
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $addPermit}
+		    <li><a href="{link addCredit}">Přidělit kredity</a></li>
+		{/if}
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+{block #adminContent}
+    <h2>Správa kreditů</h2>
+    {control creditsGrid}	
+{/block}

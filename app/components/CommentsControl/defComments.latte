@@ -1,0 +1,15 @@
+<h3>Komentáře</h3>
+
+{if $comments !== FALSE}
+
+	{foreach $comments as $c}
+
+	<p>
+		<br/>#{$c->id_comment} {$c->inserted_time|date:'%d.%m.%Y'} | {$c->updated_time|date:'%d.%m.%Y'} 
+		<br/>{$c->content}
+		<br/>Přidal {$c->author}
+	</p>
+	{/foreach}
+{else}
+	Žádné komentáře
+{/if}

@@ -1,0 +1,22 @@
+{layout ./base.latte}
+{block #title}
+    {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent}
+{/block}
+
+{block #articlesContent}
+
+    <h2>Články</h2>
+
+    {if $articles}
+	{foreach $articles as $art}
+		<br/><a href="{link showArticle,$art->id_article}">{$art->title|truncate:70}</a>
+	{/foreach}
+    {else}
+	Žádné články nenalezeny.
+    {/if}
+
+{/block}

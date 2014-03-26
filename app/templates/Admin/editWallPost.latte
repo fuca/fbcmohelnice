@@ -1,0 +1,22 @@
+{layout base.latte}
+{block #breadcrumbs}
+	{include #parent} 
+	/ <a href="{plink Admin:walls}">Správa nástěnek</a> 
+	/ Editace příspěvku
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:walls}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Editace příspěvku</h2>
+    {control editWallPostForm}
+{/block}
+
+

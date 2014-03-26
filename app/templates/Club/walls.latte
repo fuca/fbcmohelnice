@@ -1,0 +1,45 @@
+{layout base.latte}
+{if $title == ""}{var tititle => "Nástěnka celého klubu"} {else} {var tititle => "Nástěnka skupiny ". $title} {/if}
+{block #title}
+    Nástěnky 
+    | {include #parent}
+{/block}
+    
+{block #breadcrumbs}
+    {include #parent} 
+    / {$tititle}
+{/block}
+{block #subMenu}
+    {control categoriesMenu:contentMenu "submenu"}
+    <div class="submenu">
+    
+    <ul>
+	<li class="title">/ Možnosti</li>
+	<li><a href="{plink Club:default}">Zpět</a></li>
+    </ul>
+    </div>
+{/block}
+
+{block #clubContent}
+<h2>{$tititle}</h2>
+
+{if $actualData}
+	{foreach $actualData as $a}
+		<h3><a href="{link Club:showWallPost $a->id_wallpost, $abbr}">{$a->title}</a></h3>
+		{!$a->content|truncate:40}
+                {$a->show_to}
+	{/foreach}
+{else}
+	<p class="wall-actual-thread">Na této nástěnce ještě nic nevisí</p>
+{/if}
+
+<h2>Historie</h2>
+{if $oldData}
+	{foreach $oldData as $o}
+		</br>
+		<a href="{link Club:showWallPost $o->id_wallpost}">{$o->title}</a>
+	{/foreach}
+{else}
+	<p class="wall-thread-history">Historie nástěnky je prázdná</p>
+{/if}
+{/block}

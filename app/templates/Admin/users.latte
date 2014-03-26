@@ -1,0 +1,27 @@
+{layout base.latte}
+{block #title}
+    Správa uživatelů 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Správa uživatelů
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $addPermit}
+		    <li><a href="{link Admin:addUser}">Nový uživatel</a></li>
+		{/if}
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+{block #adminContent}
+    <h2>Správa uživatelů</h2>
+    {control usersGrid}
+{/block}

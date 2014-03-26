@@ -1,0 +1,31 @@
+{layout ./base.latte}
+{block #title}Moje údaje | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Moje údaje{/block}
+
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		<li><a href="{link User:changeData}">Změnit údaje</a></li>
+		<li><a href="{plink User:changePassword}">Změnit heslo</a></li>
+                <li><a href="{plink User:default}">Zpět</a></li>
+	</ul>
+</div>
+{/block}
+
+{block #userContent}
+<h2>Moje údaje</h2>
+
+{if $data != NULL}
+<table>
+	
+	{foreach $data as $key=>$d}
+		<tr><td>{$key}</td><td>{$d}</td></tr>
+	{/foreach}
+	</table>
+{else}
+	Nic nenalezeno
+{/if}
+	
+	
+{/block}

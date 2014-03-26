@@ -1,0 +1,34 @@
+{var robots => noindex}
+{block #title}Profil člena | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} &raquo; Profil člena{/block}
+{block #content}
+{if $publicData !== FALSE}
+<h2>Profil člena </h2><br/>
+<h2>{$publicData['name']} <strong>"{$publicData['nick']}"</strong> {$publicData['surname']} ({$publicData['year']})</h2>
+<br>
+{foreach $publicData as $key => $d}
+	{$d}<br />
+{/foreach}
+{/if}
+{dump $publicData}
+{if $profile_req == 'con' || $profile_req == 'nul'}
+	{if $levelOneData !== FALSE}
+		{foreach $levelOneData as $l}
+			{$l}
+		{/foreach}
+	{/if}
+
+	{if $levelTwoData !== FALSE}
+		{foreach $levelTwoData as $ll}
+			{$ll}
+		{/foreach}
+	{/if}
+
+	{if $profileData !== FALSE}
+		{foreach $profileData as $p}
+			{$p}</br>
+		{/foreach}
+	{/if}
+{/if}
+
+

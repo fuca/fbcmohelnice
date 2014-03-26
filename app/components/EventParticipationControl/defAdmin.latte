@@ -1,0 +1,15 @@
+{form eventParticipationAdminForm}
+<fieldset>
+    <legend>Nové učasti</legend>
+
+    {foreach $form->getComponent('participations')->getControls() as $row}
+	{input $row}
+	{if $iterator->getCounter() % 3 == 0 }
+	    <br/>
+	{/if}
+	
+    {/foreach}
+    <br/>
+</fieldset>
+    {input send}
+{/form}

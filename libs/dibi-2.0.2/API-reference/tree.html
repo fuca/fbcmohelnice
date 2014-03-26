@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.6.1" />
+
+	<title>Tree | Dibi 2.0.2 API documentation</title>
+
+	<script type="text/javascript" src="resources/combined.js?3201557540"></script>
+	<script type="text/javascript" src="elementlist.js?236042691"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1321461267" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Dibi 2.0.2 API documentation" href="http://api.dibiphp.com/2.0/opensearch.xml" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-dibi.html">dibi<span></span></a>
+						<ul>
+				<li><a href="package-dibi.drivers.html">drivers</a>
+						</li>
+				<li><a href="package-dibi.nette.html">nette</a>
+						</li>
+				<li><a href="package-dibi.reflection.html">reflection</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="DateTime.html">DateTime</a></li>
+				<li><a href="DateTimeZone.html">DateTimeZone</a></li>
+				<li><a href="dibi.html">dibi</a></li>
+				<li><a href="DibiColumnInfo.html">DibiColumnInfo</a></li>
+				<li><a href="DibiConnection.html">DibiConnection</a></li>
+				<li><a href="DibiDatabaseInfo.html">DibiDatabaseInfo</a></li>
+				<li><a href="DibiDataSource.html">DibiDataSource</a></li>
+				<li><a href="DibiDateTime.html">DibiDateTime</a></li>
+				<li><a href="DibiEvent.html">DibiEvent</a></li>
+				<li><a href="DibiFileLogger.html">DibiFileLogger</a></li>
+				<li><a href="DibiFirebirdDriver.html">DibiFirebirdDriver</a></li>
+				<li><a href="DibiFirePhpLogger.html">DibiFirePhpLogger</a></li>
+				<li><a href="DibiFluent.html">DibiFluent</a></li>
+				<li><a href="DibiForeignKeyInfo.html">DibiForeignKeyInfo</a></li>
+				<li><a href="DibiIndexInfo.html">DibiIndexInfo</a></li>
+				<li><a href="DibiLiteral.html">DibiLiteral</a></li>
+				<li><a href="DibiMsSql2005Driver.html">DibiMsSql2005Driver</a></li>
+				<li><a href="DibiMsSqlDriver.html">DibiMsSqlDriver</a></li>
+				<li><a href="DibiMySqlDriver.html">DibiMySqlDriver</a></li>
+				<li><a href="DibiMySqliDriver.html">DibiMySqliDriver</a></li>
+				<li><a href="DibiNetteExtension.html">DibiNetteExtension</a></li>
+				<li><a href="DibiNettePanel.html">DibiNettePanel</a></li>
+				<li><a href="DibiObject.html">DibiObject</a></li>
+				<li><a href="DibiOdbcDriver.html">DibiOdbcDriver</a></li>
+				<li><a href="DibiOracleDriver.html">DibiOracleDriver</a></li>
+				<li><a href="DibiPdoDriver.html">DibiPdoDriver</a></li>
+				<li><a href="DibiPostgreDriver.html">DibiPostgreDriver</a></li>
+				<li><a href="DibiResult.html">DibiResult</a></li>
+				<li><a href="DibiResultInfo.html">DibiResultInfo</a></li>
+				<li><a href="DibiResultIterator.html">DibiResultIterator</a></li>
+				<li><a href="DibiRow.html">DibiRow</a></li>
+				<li><a href="DibiSqlite3Driver.html">DibiSqlite3Driver</a></li>
+				<li><a href="DibiSqliteDriver.html">DibiSqliteDriver</a></li>
+				<li><a href="DibiTableInfo.html">DibiTableInfo</a></li>
+				<li><a href="DibiTranslator.html">DibiTranslator</a></li>
+				<li><a href="PDO.html">PDO</a></li>
+				<li><a href="PDOStatement.html">PDOStatement</a></li>
+				<li><a href="ReflectionClass.html">ReflectionClass</a></li>
+				<li><a href="ReflectionObject.html">ReflectionObject</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="ArrayAccess.html">ArrayAccess</a></li>
+				<li><a href="Countable.html">Countable</a></li>
+				<li><a href="IDataSource.html">IDataSource</a></li>
+				<li><a href="IDibiDriver.html">IDibiDriver</a></li>
+				<li><a href="IDibiReflector.html">IDibiReflector</a></li>
+				<li><a href="IDibiResultDriver.html">IDibiResultDriver</a></li>
+				<li><a href="Iterator.html">Iterator</a></li>
+				<li><a href="IteratorAggregate.html">IteratorAggregate</a></li>
+				<li><a href="Reflector.html">Reflector</a></li>
+				<li><a href="Traversable.html">Traversable</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="DibiDriverException.html">DibiDriverException</a></li>
+				<li><a href="DibiException.html">DibiException</a></li>
+				<li><a href="DibiNotImplementedException.html">DibiNotImplementedException</a></li>
+				<li><a href="DibiNotSupportedException.html">DibiNotSupportedException</a></li>
+				<li><a href="DibiPcreException.html">DibiPcreException</a></li>
+				<li><a href="DibiProcedureException.html">DibiProcedureException</a></li>
+				<li><a href="Exception.html">Exception</a></li>
+				<li><a href="InvalidArgumentException.html">InvalidArgumentException</a></li>
+				<li><a href="LogicException.html">LogicException</a></li>
+				<li><a href="RuntimeException.html">RuntimeException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:x_apk4yrmjm" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="hidden" name="more" value="api" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+<span>Package</span>			</li>
+			<li>
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li class="active">
+<span>Tree</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content">
+	<h1>Tree</h1>
+
+		<h3>Classes</h3>
+<div class="tree">
+	<ul>
+
+			<li><div class="notlast"><a href="DateTime.html"><span>DateTime</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="DibiDateTime.html"><span>DibiDateTime</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="DateTimeZone.html"><span>DateTimeZone</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiEvent.html"><span>DibiEvent</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiObject.html"><span>DibiObject</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="DibiColumnInfo.html"><span>DibiColumnInfo</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiConnection.html"><span>DibiConnection</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiDataSource.html"><span>DibiDataSource</span></a>
+			 implements 
+				<a href="IDataSource.html"><span>IDataSource</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiDatabaseInfo.html"><span>DibiDatabaseInfo</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiFileLogger.html"><span>DibiFileLogger</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiFirePhpLogger.html"><span>DibiFirePhpLogger</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiFirebirdDriver.html"><span>DibiFirebirdDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>, 
+			
+				<a href="IDibiReflector.html"><span>IDibiReflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiFluent.html"><span>DibiFluent</span></a>
+			 implements 
+				<a href="IDataSource.html"><span>IDataSource</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiForeignKeyInfo.html"><span>DibiForeignKeyInfo</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiIndexInfo.html"><span>DibiIndexInfo</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiLiteral.html"><span>DibiLiteral</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiMsSql2005Driver.html"><span>DibiMsSql2005Driver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiMsSqlDriver.html"><span>DibiMsSqlDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiMySqlDriver.html"><span>DibiMySqlDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiMySqliDriver.html"><span>DibiMySqliDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiNettePanel.html"><span>DibiNettePanel</span></a>
+			 implements 
+<span>IBarPanel</span>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiOdbcDriver.html"><span>DibiOdbcDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>, 
+			
+				<a href="IDibiReflector.html"><span>IDibiReflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiOracleDriver.html"><span>DibiOracleDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>, 
+			
+				<a href="IDibiReflector.html"><span>IDibiReflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiPdoDriver.html"><span>DibiPdoDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiPostgreDriver.html"><span>DibiPostgreDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>, 
+			
+				<a href="IDibiReflector.html"><span>IDibiReflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiResult.html"><span>DibiResult</span></a>
+			 implements 
+				<a href="IDataSource.html"><span>IDataSource</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiResultInfo.html"><span>DibiResultInfo</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiSqlite3Driver.html"><span>DibiSqlite3Driver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiSqliteDriver.html"><span>DibiSqliteDriver</span></a>
+			 implements 
+				<a href="IDibiDriver.html"><span>IDibiDriver</span></a>, 
+			
+				<a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiTableInfo.html"><span>DibiTableInfo</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="DibiTranslator.html"><span>DibiTranslator</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="DibiResultIterator.html"><span>DibiResultIterator</span></a>
+			 implements 
+				<a href="Iterator.html"><span>Iterator</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiRow.html"><span>DibiRow</span></a>
+			 implements 
+				<a href="ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>, 
+			
+				<a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><span>Nette\Config\CompilerExtension</span>			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="DibiNetteExtension.html"><span>DibiNetteExtension</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="PDO.html"><span>PDO</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="PDOStatement.html"><span>PDOStatement</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="ReflectionClass.html"><span>ReflectionClass</span></a>
+			 implements 
+				<a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="ReflectionObject.html"><span>ReflectionObject</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="dibi.html"><span>dibi</span></a>
+			
+			
+			</div>
+
+		</li>
+		
+	</ul>
+</div>
+
+		<h3>Interfaces</h3>
+<div class="tree">
+	<ul>
+
+			<li><div class="notlast"><a href="ArrayAccess.html"><span>ArrayAccess</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Countable.html"><span>Countable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IDataSource.html"><span>IDataSource</span></a>
+			 implements 
+				<a href="Countable.html"><span>Countable</span></a>, 
+			
+				<a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IDibiDriver.html"><span>IDibiDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IDibiReflector.html"><span>IDibiReflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IDibiResultDriver.html"><span>IDibiResultDriver</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Iterator.html"><span>Iterator</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="IteratorAggregate.html"><span>IteratorAggregate</span></a>
+			 implements 
+				<a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="Reflector.html"><span>Reflector</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="Traversable.html"><span>Traversable</span></a>
+			
+			
+			</div>
+
+		</li>
+		
+	</ul>
+</div>
+
+
+		<h3>Exceptions</h3>
+<div class="tree">
+	<ul>
+
+			<li class="last"><div class="last"><a href="Exception.html"><span>Exception</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="DibiException.html"><span>DibiException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li><div class="notlast"><a href="DibiDriverException.html"><span>DibiDriverException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiNotImplementedException.html"><span>DibiNotImplementedException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="DibiNotSupportedException.html"><span>DibiNotSupportedException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li class="last"><div class="last"><a href="DibiProcedureException.html"><span>DibiProcedureException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li><div class="notlast"><a href="DibiPcreException.html"><span>DibiPcreException</span></a>
+			
+			
+			</div>
+
+				</li>
+
+			<li><div class="notlast"><a href="LogicException.html"><span>LogicException</span></a>
+			
+			
+			</div>
+
+				<ul>
+
+			<li class="last"><div class="last"><a href="InvalidArgumentException.html"><span>InvalidArgumentException</span></a>
+			
+			
+			</div>
+
+				</ul></li>
+
+			<li class="last"><div class="last"><a href="RuntimeException.html"><span>RuntimeException</span></a>
+			
+			
+			</div>
+
+		</li>
+		</ul></li>
+	</ul>
+</div>
+</div>
+
+	<div id="footer">
+		Dibi 2.0.2 API documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.6.1</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

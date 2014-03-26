@@ -1,0 +1,21 @@
+{layout ./base.latte}
+{block #title}Upravit profil | {include #parent}{/block}
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink User:profile}">Můj profil</a> 
+    / Upravit profil 
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+                <li><a href="{plink User:profile}">Zpět</a></li>
+	</ul>
+</div>{/block}
+
+{block #userContent}
+<h2>Upravit profil</h2>
+{control webProfileForm}
+{/block}
+

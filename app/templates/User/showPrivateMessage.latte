@@ -1,0 +1,36 @@
+{layout ./base.latte}
+{block #title}Zpráva | {include #parent}{/block}
+{block #breadcrumbs}
+	{include #parent}
+	/ <a href="{plink User:messageBox}">Zprávy</a> 
+	/ {$message['subject']}
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink User:inbox}">Příchozí</a></li>
+	    <li><a href="{plink User:replyMessage msgId => $message->id}">Odpovedět</a></li>
+	    <li><a href="{link deleteMessage! msgId => $message->id}">Smazat</a></li>
+	</ul>
+</div>{/block}
+
+{block #userContent}
+{if $message}
+	{dump $message}
+	{$message->subject}<br/>
+	{$message->sender_name} {$message->sent}<br/>
+	{$message->content}<br/><br/>
+	Komu:
+	<table>
+	{foreach $message->recipients as $rec}
+	
+		<tr><td>{if $rec == $message->recipient_name} já{else}{$rec}{/if}</td></tr>
+	{/foreach}
+	</table>
+	
+{else}
+	Nic nenalezeno
+{/if}
+{/block}

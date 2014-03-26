@@ -1,0 +1,28 @@
+{layout base.latte}
+{block #title}
+    Správa přihlášek
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink Admin:users}">Správa uživatelů</a>
+    / Správa přihlášek člena {if $user != NULL}{$user->name} {$user->surname} ({$user->kid}){else} ? {/if}
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $editPermit}
+		    <li><a href="{link addApplication $user->kid}">Zadat přihlášku</a></li>
+		{/if}
+		<li><a href="{plink Admin:users}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+{block #adminContent}
+    <h2>Správa přihlášek člena {if $user != NULL}{$user->name} {$user->surname} ({$user->kid}){else} ? {/if}</h2>
+    {control userApplicationsGrid}
+{/block}

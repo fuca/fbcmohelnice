@@ -1,0 +1,26 @@
+{layout ./base.latte}
+{block #title}Detail objednávky | Správa objednávek | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / <a href="{plink User:orders}">Správa objednávek</a> / Detail objednávky{/block}
+
+{block #userContent}
+<h2>Detail objednávky</h2>
+
+{if $order}
+	{foreach $order as $o}
+		</br> {$o}
+	{/foreach}
+    {$order->comment}
+{/if}
+{/block}
+
+{block #subMenu}
+    {if $editAllowed}
+        <div class="submenu">
+            <ul>
+                <li class="title">/ Možnosti</li>
+                <li><a href="{plink Admin:editOrder $order->id}">Upravit</a></li>
+                <li><a href="{plink User:orders}">Zpět</a></li>
+            </ul>
+        </div>
+    {/if}
+{/block}

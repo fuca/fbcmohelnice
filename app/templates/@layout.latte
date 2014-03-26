@@ -1,0 +1,166 @@
+{**
+ * FlorbalMohelnice application layout template.
+ *
+ * @copyright  Copyright (c) 2010 Michal Fučík
+ * @package    florbalMohelnice
+ *
+ * @param string   $basePath web base path
+ * @param string   $robots   tell robots how to index the content of a page (optional)
+ * @param array    $flashes  flash messages
+ *}
+
+<!doctype html>
+<html lang="cz">
+<head>
+  <title>{block #title}FBC Mohelnice{/block}</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="copyright" content="FBC Mohelnice" />
+  <meta name="author" lang="cs" content="" />
+  <meta name="robots" content="Index,Follow" />
+  <meta name="description" content="Webová prezentace florbalového klubu z Mohelnice" />
+  <meta name="keyword" content="fbc mohelnice, fbcmohelnice" />
+  <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+  
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{$basePath}/css/_css.css">
+  <link rel="stylesheet" href="{$basePath}/css/basic-jquery-slider.css">
+ 
+  <script type="text/javascript" src="{$basePath}/js/jquery.min.js"></script>
+  <script type="text/javascript" src="{$basePath}/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="{$basePath}/js/timepicker.js"></script>
+
+  <script type="text/javascript" src="{$basePath}/js/netteForms.js"></script> 
+  <script type="text/javascript" src="{$basePath}/js/jquery-1.9.1.min.js"></script>
+    
+  <script type='text/javascript' src='{$basePath}/js/jquery-ui-1.10.2.custom.min.js'></script>
+  
+  <script type='text/javascript' src='{$basePath}/js/jquery-ui-timepicker-addon.js'></script>
+  <script type='text/javascript' src='{$basePath}/js/dateInput.js'></script>
+  <script type='text/javascript' src='{$basePath}/js/main.js'></script>
+  <script type='text/javascript' src='{$basePath}/js/jquery.hoverIntent.minified.js'></script>
+  <script type='text/javascript' src='{$basePath}/js/jquery.dcmegamenu.1.3.3.js'></script>
+
+   
+
+  <script type="text/javascript">
+    $(document).ready(function($){
+    	$('#mega-menu-9').dcMegaMenu({
+    		rowItems: '5',
+    		speed: 0,
+    		effect: 'fade',
+    		fullWidth: false
+    	});
+    });
+  </script>
+  <script type="text/javascript" src="{$basePath}/js/basic-jquery-slider.js"></script>
+  <script type="text/javascript" src="{$basePath}/js/jquery.bxSlider.js"></script>
+  <script>
+      $(document).ready(function() {
+        $('#banner').bjqs({
+          'animation' : 'slide',
+          'width' : 968,
+          'height' : 340,
+          'showMarkers' : true,
+          'showControls' : true,
+          'centerMarkers' : false
+        });
+        
+      });
+      
+      $(function(){
+        $('#partner-wall-1').bxSlider({
+          displaySlideQty: 5,
+          moveSlideQty: 1,
+          auto: true,
+          controls: false,
+          speed: 500,
+          pause: 4000
+        });
+      });
+      
+  </script> 
+
+<!-- place in header of your html document -->
+<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
+<script>
+tinymce.init({
+    selector: "textarea.mceEditor",
+    theme: "modern",
+    resize: true,
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ],
+   menubar: false,
+   toolbar_items_size: 'small',
+   statusbar : false,
+   content_css: "css/content.css",
+   toolbar: "bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | link image | print preview | forecolor backcolor emoticons"
+ }); 
+</script>  
+</head>
+<body class="{$layoutStyle}">
+  <div id="header">
+    <div class="wrapper">
+      <div id="usermenu">
+		{control loginControl}
+        <div class="search">
+          <form><input type="text" class="textfield" /><input type="submit" class="button" value="Hledat" /></form> 
+        </div>
+      </div>
+    
+      <a href="{plink Homepage:default}"><div id="clublogo"></div></a>
+    </div> 
+  </div>
+  
+<div class="wrapper">
+  <div id="sectionbar">
+  
+  <div id="publicmenu-container">
+		{control publicMenu}
+  </div>  
+
+{block #maintheme}
+{/block}
+    
+  </div> 
+  
+  <div id="content">
+
+    {include #content}
+    
+  <div class="cleaner"></div>
+  </div>  
+  
+   </div>
+  <div id="footer">
+    <div class="wrapper">
+      <div class="partners">
+        <ul class="multiple" id="partner-wall-1">
+          <li><a href=""><img src="{$basePath}/img/partner_hella.jpg" title="dsadasd" height="125" width="200" /><p>Hella Autotechnik</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_cp.jpg" height="125" width="200" /><p>Česká pojišťovna</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_futurpol.jpg" height="125" width="200" /><p>Futurpol</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_siemens.jpg" height="125" width="200" /><p>Siemens Mohelnice</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_davon.jpg" height="125" width="200" /><p>Davon Uničov</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_mlynska.jpg" height="125" width="200" /><p>ZŠ Mlýnská</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_ddm.jpg" height="125" width="200" /><p>DDM Mohelnice</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_florbalcom.jpg" height="125" width="200" /><p>Florbal.com</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_a3sport.jpg" height="125" width="200" /><p>A3 Sport</p></a></li>
+          <li><a href=""><img src="{$basePath}/img/partner_jersey53.jpg" height="125" width="200" /><p>Jersey53</p></a></li>
+        </ul>
+      </div>
+
+       <div class="apendix">
+
+          <p class="menu"><a href="">Homepage</a> &nbsp;&nbsp;/&nbsp;&nbsp; <a href="">Mapa webu</a>  &nbsp;&nbsp;/&nbsp;&nbsp;  <a href="">Kontakty</a></p>
+          <p class="copyright">&copy; 2013 FBC Mohelnice, o. s.</p>
+      </div>
+      </div>
+      </div>
+      
+</body>
+</html>

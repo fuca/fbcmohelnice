@@ -1,0 +1,27 @@
+{layout base.latte}
+{block #title}
+    Nový uživatel 
+    | Správa uživatelů
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink Admin:users}">Správa uživatelů</a>
+    / Nový uživatel
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	    <ul>
+		    <li class="title">/ Možnosti</li>
+		    <li><a href="{plink Admin:users}">Zpět</a></li>
+	    </ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Nový uživatel</h2>
+    {control addUserForm}
+{/block}
+	

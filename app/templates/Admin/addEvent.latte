@@ -1,0 +1,27 @@
+{layout base.latte}
+{block #title}
+    Nová událost
+    | Správa událostí
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ <a href="{plink Admin:events}">Správa událostí</a> 
+	/ Nová událost
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		
+		<li><a href="{plink Admin:events}">Zpět</a></li>
+	</ul>
+</div>{/block}
+
+{block #adminContent}
+    <h2>Nová událost</h2>
+    {control addEventForm}
+{/block}
+	

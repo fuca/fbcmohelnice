@@ -1,0 +1,76 @@
+{var robots => index}
+
+{block #title}
+	Hlavní strana | {include #parent}
+{/block}
+
+{block #maintheme}
+<div id="maintheme-container"> 
+  <div id="banner">
+    <ul class="bjqs">
+    {if $articles}
+	{foreach $articles as $article}
+	      <li><a href="{plink Articles:showArticle $article->id_article}"><img src="img/banner01.jpg"/></a>
+		<div class="caption"><h2><a href="{plink Articles:showArticle $article->id_article}">{$article->title}</a></h2>
+		    <p>
+			<span class="published">&nbsp;</span>
+			{$article->updated_time|date:"%d.%m.%Y"}
+			<span class="group">&nbsp;</span>
+			    {foreach $article->categories as $key=>$c}
+				    <a href="{plink Articles:default $key}">{$c}</a>
+				    {if !$iterator->isLast()},{/if}	
+			    {/foreach}
+		    </p>
+		</div>
+	    </li>
+	{/foreach}
+	</ul>
+    {/if}
+  </div>
+</div>
+{/block}
+
+{block #content}
+
+    <div class="right-box-wrapper">
+      
+        <div class="right-box"></div>
+                
+	<div class="banner"></div>
+         
+	<div class="right-box contact">
+	    <h2>Rychlý kontakt</h2>
+                <p><strong><big>FBC Mohelnice</big></strong>, o. s.<br />Masarykova 546/25, 789 85 Mohelnice</p>
+                <p><strong>IČ</strong> 228 90 785, &nbsp; <strong>DIČ</strong> CZ 228 90 785</p>
+                <p><strong>Bank. spojení</strong> &nbsp; 2500140367/2010 (Fio)</p>
+                <p style="text-align: right;">/ <a href="">více kontaktů</a></p>
+	</div>
+
+	<div id="map" class="right-box"></div>
+
+      </div>
+      
+      <div class="article-box">
+	{if $articles}
+	    {foreach $articles as $article}
+		<div class="article-wrapper" style="background-image: url('{$basePath}/img/articles/{$article->picture}');">
+		    <a href="{plink Articles:showArticle $article->id_article}">
+			<div class="article"><h3>{$article->title}</h3>
+			    <span class="published">&nbsp;{$article->updated_time|date:"%d.%m.%Y"}</span> 
+			    <span class="group">&nbsp;
+				{foreach $article->categories as $c}
+				    {$c}
+				    {if !$iterator->isLast()},{/if}
+				{/foreach}
+			    </span>
+			    <p>{$article->content|truncate:100}</p>
+			</div>
+		    </a>
+		</div>
+	    {/foreach}
+        {/if}
+	<div class="fb-like-box" style="border: 1px solid #ccc;" data-href="https://www.facebook.com/fbcmohelnice" data-width="670" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+        
+      </div>
+  
+      

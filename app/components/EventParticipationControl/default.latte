@@ -1,0 +1,24 @@
+{if $allowed !== FALSE && $done === NULL}
+<div>
+    <span>ANO závazně potvrzuji účast</span>
+    {form yesForm}
+	{input comment}</br>
+	{input submit}
+    {/form}
+</div>
+
+<div>
+    <span>NE nezůčastním se</span>
+    {form noForm}
+	{input comment}</br>
+	{input submit}
+    {/form}
+</div>
+	Doposud jste se nevyjádřil, takže se s vámi nepočítá.
+{else}
+    {if $done == 1}
+	Akce se ÚČASTNÍTE
+    {else}
+	Akce se NEÚČASTNÍTE
+    {/if}
+{/if}

@@ -1,0 +1,21 @@
+{layout ./base.latte}
+{block #title}Editace objednávky | Správa objednávek | {include #parent}{/block}
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink Admin:orders}">Správa objednávek</a> 
+    / Editace objednávky{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:orders}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Editace objednávky</h2>
+    {control editOrderForm}
+{/block}
+

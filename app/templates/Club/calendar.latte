@@ -1,0 +1,36 @@
+{layout base.latte}
+    {if $title == ""}{var tititle => "Kalendář akcí celého klubu"} {else} {var tititle => "Kalendář akcí ". $title} {/if}
+{block #title}
+    Kalendář akcí 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ {$tititle}
+{/block}
+
+{block #subMenu}
+    {control categoriesMenu:contentMenu "submenu"}
+    <div class="submenu">
+	
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Club:default}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #clubContent}
+    <h2>{$tititle}</h2>
+    {if $events}
+	    {foreach $events as $ev}
+	    <br/>{$ev->type} &raquo; <a href="{link Club:showEvent, $ev->id_event, $abbr}">{$ev->title|truncate:50}</a></br>
+		Poslední změna: {$ev->ordered_time|date:'%d.%m.%Y'}</br>
+
+	    {/foreach}
+
+    {else}	
+	    Žádné akce nenalezeny
+    {/if}
+{/block}

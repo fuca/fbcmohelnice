@@ -1,0 +1,28 @@
+{layout base.latte}
+{block #title}
+    Správa sezón 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Správa sezón
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $addPermit}
+		    <li><a href="{plink Admin:addSeason}">Vytvořit novou sezónu</a></li>
+		{/if}
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+{block #adminContent}
+<h2>Správa sezón</h2>
+{control seasonsGrid}
+{/block}
+

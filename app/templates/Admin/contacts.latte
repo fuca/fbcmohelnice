@@ -1,0 +1,24 @@
+{layout base.latte}
+
+{block #title}
+    Správa kontaktů 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Správa kontaktů
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	    <ul>
+		    <li class="title">/ Možnosti</li>
+		    <li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Správa kontaktů</h2>
+{/block}

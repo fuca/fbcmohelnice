@@ -1,0 +1,148 @@
+
+/* ===================================
+   GLOBAL WIREFRAME 
+   ===================================*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 90%;
+  font-family: 'Open Sans',arial,sans-serif;
+  background: #eee url('images/bg.png') no-repeat top center;
+}
+
+.wrapper {
+  width: 1010px;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius:  3px 3px 0 0;
+}
+
+
+/* ===================================
+   PAGE HEADER
+   
+   #header
+     .wrapper
+       #usermenu
+       #clublogo 
+   ===================================*/
+
+
+#header { padding: 15px 0 20px 0; }
+#header .wrapper { background: transparent; }
+
+#clublogo {
+  background: transparent url('../img/bg_clublogo.png') no-repeat center left;
+  height: 115px;
+  width: 500px;
+}
+
+/* ===================================
+   PUBLIC MENU + SLIDER
+   
+   #sectionbar
+     #publicmenu-container
+     #maintheme-container
+       #banner
+   ===================================*/
+
+#sectionbar {
+  background: transparent url('../img/bg_sectionbar_homepage.png') repeat-x top left;
+  padding: 20px 0 10px 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px 0;
+  border-radius: 3px 3px 0 0;
+}
+
+#publicmenu-container {
+  background: transparent url('../img/bg_publicmenu_light.png') repeat-x center;
+  width: 968px;
+  height: 48px;
+  margin: 0px auto 0px auto;
+  padding: 0;
+  position: relative;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#maintheme-container{
+  padding: 10px 0 10px 0;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+#banner {
+  margin:0 auto;
+  position:relative;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  xbox-shadow: 0px 3px 7px #000;
+}
+
+/* ===================================
+   CONTENT
+   
+   #content
+     #side-box
+     #main-box
+   ===================================*/
+
+#content { padding: 20px 20px 10px 20px; }
+
+/* Sidebox on the left. */
+#content .layout-left .side-box { float: left; }
+#content .layout-left .main-box { margin-left: 275px; padding-right: 5px; }
+
+/* Sidebox on the right. */
+#content .layout-right .side-box { float: right; }
+#content .layout-right .main-box { margin-right: 275px; padding-left: 5px; }
+
+#content .cleaner {
+  visibility: hidden;
+  width: 100%;
+  clear: both;
+}
+
+
+/* ===================================
+   FOOTER
+   ===================================*/
+   
+#footer div.partners {
+  overflow: hidden;
+  padding: 20px 15px 20px 15px;
+  margin: 0 auto;
+  position: relative;
+  background: #222 url('../img/footer_bg.png') repeat-x left top;
+  -webkit-border-radius:  0 0 3px 3px;
+  -moz-border-radius:  0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+#footer .partners ul { margin: 0; padding: 0; }
+
+#footer .partners ul li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 198px; 
+  list-style-position: outside; 
+  list-style-type: none; 
+  list-style-image: none;
+}
+
+#footer div.apendix p {
+  color: #555;
+  margin: 0;
+  padding: 10px 5px;
+}
+
+#footer div.apendix p.menu { float: right; }

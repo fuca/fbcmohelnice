@@ -1,0 +1,21 @@
+<div class="{$class}">
+<ul class="{$layoutStyle}">
+<li class="title">{$menuLabel}</li>
+	{block #content-menu}
+		{foreach $nodes as $node}
+                        {if isset($node->data['param'])}
+                            {var param=>$node->data['param']}
+                        {else}
+                            {var param=>FALSE}
+                        {/if}
+			<li {if $node->isCurrent()} class="current" {/if}><a href="{if $node->mode} {if $param === FALSE} {plink $node->url} {else} {plink $node->url $param}{/if} {else} {$node->url}{/if}">{$node->label}</a></li>
+				{if count($node->getComponents()) > 0}
+					<ul>
+					{include #content-menu, nodes => $node->getComponents()}
+					</ul>
+				{/if}
+		{/foreach}
+	
+	{/block}
+</ul>
+</div>

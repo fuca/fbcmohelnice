@@ -1,0 +1,19 @@
+{layout ./base.latte}
+
+{block #title}
+    {if $page}{$page->title} {/if} | 
+    {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    {if $page} / {$page->title} {/if}
+{/block}
+
+{block #clubInfoContent}
+    {if $page}
+	{!$page->content}
+    {else}
+	Stránka nenalezena.
+    {/if}
+{/block}

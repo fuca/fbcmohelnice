@@ -1,0 +1,12 @@
+{layout ./base.latte}
+{block #title}Uživatelská sekce | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Uživatelské sekce{/block}
+
+{block #subMenu}{/block}
+
+{block #userContent}
+<h2>Uživatelská sekce</h2>
+{control userMenu:grid}
+{/block}
+
+

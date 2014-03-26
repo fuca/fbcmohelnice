@@ -1,0 +1,40 @@
+{layout base.latte}
+{if $title == ""}{var tititle => "Nástěnka celého klubu"} {else} {var tititle => "Nástěnka skupiny ". $title} {/if}
+{block #title}
+    {$wallPost->title} 
+    | {$tititle} 
+    | IS 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{link Club:walls $abbr}">{$tititle}</a> 
+    / {$wallPost->title}
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    {if $editAllowed}
+		<li><a href="{plink Admin:editWallPost $wallPost->id_wallpost}">Upravit</a></li>
+	    {/if}
+	    <li><a href="{link Club:walls $abbr}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #clubContent}
+    <h2>{$wallPost->title}</h2>
+    {!$wallPost->content}
+    {control wallPostComments:comments}
+    {if $wallPost->comment_mode == florbalMohelnice\Entities\WallPost::COMMENTS_LOGGED}
+	    
+	    {control wallPostComments:form}
+    {elseif $wallPost->comment_mode == florbalMohelnice\Entities\WallPost::COMMENTS_OFF}
+	    <p>Komentáře nejsou povoleny</p>
+    {/if}
+{/block}
+
+

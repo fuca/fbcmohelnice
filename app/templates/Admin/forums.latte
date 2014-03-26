@@ -1,0 +1,28 @@
+{layout base.latte}
+{block #title}
+    Správa fór 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ Správa fór
+{/block}
+
+{block #subMenu}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $addPermit}
+		    <li><a href="{link addForum}">Nové fórum</a></li>
+		{/if}
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	    </ul>
+	</div>
+{/block}
+
+{block #adminContent}
+    <h2>Správa fór</h2>
+    {control forumsGrid}
+{/block}
+

@@ -1,0 +1,27 @@
+{layout base.latte}
+{block #title}
+    Správa nástěnek 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ Správa nástěnek
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    {if $addPermit}
+		<li><a href="{plink Admin:addWallPost}">Nový příspěvek</a></li>
+	    {/if}
+	    <li><a href="{plink Admin:default}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+<h2>Správa nástěnek</h2>
+{control wallPostsGrid}
+{/block}

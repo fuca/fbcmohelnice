@@ -1,0 +1,24 @@
+{layout base.latte}
+{block #title}
+    Editace platby 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Úprava platby
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:payments}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Úprava platby</h2>
+    {control editPaymentForm}
+{/block}

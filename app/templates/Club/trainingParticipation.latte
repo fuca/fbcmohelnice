@@ -1,0 +1,17 @@
+{layout base.latte}
+{block #title} Docházka | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Docházka{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Club:default}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #clubContent}
+<h2>Docházka</h2>
+Zde bude statisticke vyhodnoceni dochazky v dale dohodnutem formatu.
+{/block}

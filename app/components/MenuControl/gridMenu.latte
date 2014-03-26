@@ -1,0 +1,20 @@
+
+	{$menuLabel}
+	{block #grid-menu}
+	<table>
+		{foreach $nodes as $node}
+		
+		<tr>
+		    {var $data => $node->data}
+		    <td><img src="{if isset($data['img'])}{$data["img"]}{/if}"/></td>
+		    <td><a href="{if $node->mode} {plink $node->url} {else} {$node->url}{/if}">{$node->label}</a>
+			<br/>
+			{if isset($data['img'])}{$data["desc"]}{/if}
+		    </td>
+		</tr>
+			{*if count($node->getComponents()) > 0}
+				{include #grid-menu, nodes => $node->getComponents()}
+			{/if*}
+		{/foreach}
+	</table>
+	{/block}

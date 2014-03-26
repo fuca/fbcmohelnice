@@ -1,0 +1,29 @@
+{layout base.latte}
+{block #title}Profil ke schválení | {include #parent}{/block}
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink Admin:permit}">Profil ke schválení</a> 
+    / Náhled profilu
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    {if $permitPermit}
+		<li><a href="{link permitProfile! array($data['kid'])}">Schválit</a></li>
+	    {/if}
+	    <li><a href="{plink Admin:permit}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+<h2>Profil ke schválení</h2>
+{dump $data}
+{if $data}
+	{foreach $data as $d}
+	</br>{$d}
+{/foreach}
+{/if}
+{/block}	

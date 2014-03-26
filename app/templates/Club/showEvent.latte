@@ -1,0 +1,58 @@
+{layout base.latte}
+{dump $title}
+{if $title == ""}{var tititle => "Kalendář akcí celého klubu"} {else} {var tititle => "Kalendář akcí ". $title} {/if}
+{block #title}
+    {$event->title} 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ <a href="{plink Club:calendar $abbr}">{$tititle}</a>
+	/ {$event->title}
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+    <ul>
+	<li class="title">/ Možnosti</li>
+	{control eventParticipation:controls}
+	<li><a href="{plink Club:calendar $abbr}">Zpět</a></li>	
+    </ul>
+</div>
+{/block}
+
+{block #clubContent}
+    
+    &laquo;<i>{$event->event_type_title}</i> &raquo; 
+    <h2>{$event->title}</h2>
+
+    <div style="float:left">
+	<fieldset>
+	    <legend><i>Info</i></legend>
+	    {$event->description}
+	    <strong>{$event->take_place_from|date:"G:i d.m.Y"}</strong> - <strong>{$event->take_place_to|date:"G:i d.m.Y"}</strong></br>
+	    Potvrdit do: {$event->confirm_until|date:"G:i d.m.Y"}</br>
+	</fieldset>
+	
+	<fieldset>
+	    <legend><i>Zadal</i></legend> 
+	    {$event->author}
+	</fieldset>
+	{control eventParticipation}
+    </div>
+
+	{control eventParticipation:confirmed}
+	
+    <div style="clear:both">
+	<p>
+	    {control eventParticipation:history}
+	</p>
+    </div>
+        {control eventComments}
+    {if $event->comment_mode != 'off'}
+	{control eventComments:form}
+    {else}
+	Komentáře nejsou povoleny
+    {/if}
+{/block}

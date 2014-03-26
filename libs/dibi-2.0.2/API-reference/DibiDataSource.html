@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.6.1" />
+
+	<title>Class DibiDataSource | Dibi 2.0.2 API documentation</title>
+
+	<script type="text/javascript" src="resources/combined.js?3201557540"></script>
+	<script type="text/javascript" src="elementlist.js?236042691"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?1321461267" />
+	<link rel="search" type="application/opensearchdescription+xml" title="Dibi 2.0.2 API documentation" href="http://api.dibiphp.com/2.0/opensearch.xml" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-dibi.html">dibi<span></span></a>
+						<ul>
+				<li><a href="package-dibi.drivers.html">drivers</a>
+						</li>
+				<li><a href="package-dibi.nette.html">nette</a>
+						</li>
+				<li><a href="package-dibi.reflection.html">reflection</a>
+						</li>
+							</ul></li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="dibi.html">dibi</a></li>
+				<li><a href="DibiConnection.html">DibiConnection</a></li>
+				<li class="active"><a href="DibiDataSource.html">DibiDataSource</a></li>
+				<li><a href="DibiDateTime.html">DibiDateTime</a></li>
+				<li><a href="DibiEvent.html">DibiEvent</a></li>
+				<li><a href="DibiFileLogger.html">DibiFileLogger</a></li>
+				<li><a href="DibiFirePhpLogger.html">DibiFirePhpLogger</a></li>
+				<li><a href="DibiFluent.html">DibiFluent</a></li>
+				<li><a href="DibiObject.html">DibiObject</a></li>
+				<li><a href="DibiResult.html">DibiResult</a></li>
+				<li><a href="DibiResultIterator.html">DibiResultIterator</a></li>
+				<li><a href="DibiRow.html">DibiRow</a></li>
+				<li><a href="DibiTranslator.html">DibiTranslator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="IDataSource.html">IDataSource</a></li>
+				<li><a href="IDibiDriver.html">IDibiDriver</a></li>
+				<li><a href="IDibiReflector.html">IDibiReflector</a></li>
+				<li><a href="IDibiResultDriver.html">IDibiResultDriver</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="DibiDriverException.html">DibiDriverException</a></li>
+				<li><a href="DibiException.html">DibiException</a></li>
+				<li><a href="DibiNotImplementedException.html">DibiNotImplementedException</a></li>
+				<li><a href="DibiNotSupportedException.html">DibiNotSupportedException</a></li>
+				<li><a href="DibiPcreException.html">DibiPcreException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="http://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:x_apk4yrmjm" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="hidden" name="more" value="api" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-dibi.html" title="Summary of dibi"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class DibiDataSource</h1>
+
+
+	<div class="description">
+	
+<p>Default implementation of IDataSource for dibi.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="DibiObject.html"><span>DibiObject</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>DibiDataSource</span></b>			
+			 implements 
+				<a href="IDataSource.html"><span>IDataSource</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-dibi.html">dibi</a><br />
+
+				<b>Author:</b>
+				David Grudl<br />
+		<b>Located at</b> <a href="source-libs.DibiDataSource.php.html#14" title="Go to source code">libs/DibiDataSource.php</a><br />
+	</div>
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#59" title="Go to source code">__construct</a>( <span>string <var>$sql</var></span>, <span><code><a href="DibiConnection.html">DibiConnection</a></code> <var>$connection</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd><code>string</code><br>SQL command or table or view name, as data source</dd>
+					<dt><var>$connection</var></dt>
+					<dd><code><code><a href="DibiConnection.html">DibiConnection</a></code></code><br>connection</dd>
+				</dl></div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="select" id="_select">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiDataSource.html">DibiDataSource</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_select">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#75" title="Go to source code">select</a>( <span>string|array <var>$col</var></span>, <span>string <var>$as</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Selects columns to query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Selects columns to query.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$col</var></dt>
+					<dd><code>string|array</code><br>column name or array of column names</dd>
+					<dt><var>$as</var></dt>
+					<dd><code>string</code><br>column alias</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiDataSource.html">DibiDataSource</a></code></code><br>provides a fluent interface<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="where" id="_where">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiDataSource.html">DibiDataSource</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_where">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#94" title="Go to source code">where</a>( <span>mixed <var>$cond</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds conditions to query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds conditions to query.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cond</var></dt>
+					<dd><code>mixed</code><br>conditions</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiDataSource.html">DibiDataSource</a></code></code><br>provides a fluent interface<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="orderBy" id="_orderBy">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiDataSource.html">DibiDataSource</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_orderBy">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#113" title="Go to source code">orderBy</a>( <span>string|array <var>$row</var></span>, <span>string <var>$sorting</var> = <span class="php-quote">'ASC'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Selects columns to order by.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Selects columns to order by.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd><code>string|array</code><br>column name or array of column names</dd>
+					<dt><var>$sorting</var></dt>
+					<dd><code>string</code><br>sorting direction</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiDataSource.html">DibiDataSource</a></code></code><br>provides a fluent interface<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyLimit" id="_applyLimit">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiDataSource.html">DibiDataSource</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyLimit">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#132" title="Go to source code">applyLimit</a>( <span>integer <var>$limit</var></span>, <span>integer <var>$offset</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Limits number of rows.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Limits number of rows.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$limit</var></dt>
+					<dd><code>integer</code><br>limit</dd>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiDataSource.html">DibiDataSource</a></code></code><br>provides a fluent interface<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			final public 
+			<code><a href="DibiConnection.html">DibiConnection</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#148" title="Go to source code">getConnection</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the dibi connection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the dibi connection.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiConnection.html">DibiConnection</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResult" id="_getResult">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiResult.html">DibiResult</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResult">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#163" title="Go to source code">getResult</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns (and queries) DibiResult.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns (and queries) DibiResult.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiResult.html">DibiResult</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiResultIterator.html">DibiResultIterator</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#177" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiResultIterator.html">DibiResultIterator</a></code></code><br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="IteratorAggregate.html#_getIterator">IteratorAggregate::getIterator</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetch" id="_fetch">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiRow.html">DibiRow</a></code>|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetch">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#187" title="Go to source code">fetch</a>( )</code>
+
+		<div class="description short">
+			
+<p>Generates, executes SQL query and fetches the single row.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates, executes SQL query and fetches the single row.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiRow.html">DibiRow</a></code>|false</code><br>array on success, FALSE if no next record<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchSingle" id="_fetchSingle">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchSingle">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#198" title="Go to source code">fetchSingle</a>( )</code>
+
+		<div class="description short">
+			
+<p>Like fetch(), but returns only first field.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Like fetch(), but returns only first field.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>value on success, FALSE if no next record<br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchAll" id="_fetchAll">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchAll">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#209" title="Go to source code">fetchAll</a>( )</code>
+
+		<div class="description short">
+			
+<p>Fetches all records from table.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches all records from table.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchAssoc" id="_fetchAssoc">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchAssoc">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#220" title="Go to source code">fetchAssoc</a>( <span>string <var>$assoc</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetches all records from table and returns associative tree.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches all records from table and returns associative tree.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$assoc</var></dt>
+					<dd><code>string</code><br>associative descriptor</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetchPairs" id="_fetchPairs">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetchPairs">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#232" title="Go to source code">fetchPairs</a>( <span>string <var>$key</var> = <span class="php-keyword1">NULL</span></span>, <span>string <var>$value</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetches all records from table like $key =&gt; $value pairs.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches all records from table like $key =&gt; $value pairs.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>string</code><br>associative key</dd>
+					<dt><var>$value</var></dt>
+					<dd><code>string</code><br>value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="release" id="_release">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_release">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#245" title="Go to source code">release</a>( )</code>
+
+		<div class="description short">
+			
+<p>Discards the internal cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Discards the internal cache.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toFluent" id="_toFluent">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiFluent.html">DibiFluent</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toFluent">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#260" title="Go to source code">toFluent</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns this data source wrapped in DibiFluent object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns this data source wrapped in DibiFluent object.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiFluent.html">DibiFluent</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toDataSource" id="_toDataSource">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="DibiDataSource.html">DibiDataSource</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toDataSource">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#271" title="Go to source code">toDataSource</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns this data source wrapped in DibiDataSource object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns this data source wrapped in DibiDataSource object.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="DibiDataSource.html">DibiDataSource</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#282" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns SQL query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns SQL query.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#307" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the number of rows in a given data source.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the number of rows in a given data source.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Countable.html#_count">Countable::count</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTotalCount" id="_getTotalCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTotalCount">#</a>
+		<code><a href="source-libs.DibiDataSource.php.html#325" title="Go to source code">getTotalCount</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the number of rows in a given data source.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the number of rows in a given data source.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="DibiObject.html#methods">DibiObject</a></caption>
+	<tr>
+		<td><code>
+			<a href="DibiObject.html#___call">__call()</a>, 
+			<a href="DibiObject.html#___callStatic">__callStatic()</a>, 
+			<a href="DibiObject.html#___get">__get()</a>, 
+			<a href="DibiObject.html#___isset">__isset()</a>, 
+			<a href="DibiObject.html#___set">__set()</a>, 
+			<a href="DibiObject.html#___unset">__unset()</a>, 
+			<a href="DibiObject.html#_extensionMethod">extensionMethod()</a>, 
+			<a href="DibiObject.html#_getClass">getClass()</a>, 
+			<a href="DibiObject.html#_getReflection">getReflection()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Dibi 2.0.2 API documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.6.1</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

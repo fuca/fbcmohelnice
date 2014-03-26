@@ -1,0 +1,200 @@
+#
+# SECURITY WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+#
+# If you don't protect this directory from direct web access, anybody will be able to see your passwords.
+# http://nette.org/security-warning
+#
+common:
+
+	# parametry pro dibi
+	dibi:
+		driver: mysql
+		database: d14936_new
+		profiler: [TRUE, ../../log/dibi_log.txt]
+		lazy: TRUE
+
+	parameters:
+		season:
+			seasonStarts: 9
+		models:
+			salt: 5GfZ$dF2l$r03i6xFO
+
+	php:
+		date.timezone: Europe/Prague
+		# zlib.output_compression: yes
+
+	nette:
+		application:
+			errorPresenter: Error
+
+		session:
+			expiration: 14 days
+			save_path: "%tempDir%/sessions"
+			autoStart: smart  # automaticky nastartuje jiz vytvorenou session
+
+		debugger:
+			strictMode: true
+			email: sekretar@fbcmohelnice.cz
+			blueScreen: [] # panely do blue-screen obrazovky
+			bar:
+				- @sessionPanel
+				- Nette\DI\Diagnostics\ContainerPanel
+		security:
+
+	services:
+
+		authorizator:
+			class: Nette\Security\Permission
+			setup:	# roles IF U UPDATE COUNT OF ADMINISTRATION ROLES  -> UPDATE LoginControl.php : 128 AS WELL
+				- addRole('guest') #
+				- addRole('authenticated','guest') #
+				- addRole('member', 'authenticated') #
+				- addRole('parent','member') # co to ma umet?
+				- addRole('editor','member') # jen povolena editace clanku
+				- addRole('player','member') # rozdil mezi member a player?
+				- addRole('assistant','member') # ucasti, udalosti, mikroplatby
+				- addRole('responsible','assistant') # navic gallerie, soubory
+				- addRole('executable','responsible') # zatim vsecko jako admin
+				- addRole('administrator') # vsecko
+				
+				# club menu
+				- addResource('Club:default')
+				- addResource('Club:walls')
+				- addResource('Club:forum')
+				- addResource('Club:members')
+				- addResource('Club:calendar')
+				- addResource('Club:trainingParticipation')
+				- addResource('Club:advantages')		
+				- addResource('Club:documents')
+				- addResource('Club:mail')
+				# admin menu
+				- addResource('Admin:default')
+				- addResource('Admin:fileAssign')
+				- addResource('Admin:season')
+				- addResource('Admin:microPayments')
+				- addResource('Admin:payments')
+				- addResource('Admin:credit')
+				- addResource('Admin:creditDetail')
+				- addResource('Admin:events')
+				- addResource('Admin:articles')
+				- addResource('Admin:permit')
+				- addResource('Admin:orders')
+				- addResource('Admin:gallery')
+				- addResource('Admin:users')
+				- addResource('Admin:walls')
+				- addResource('Admin:forums')
+				- addResource('Admin:staticPages')
+				- addResource('Admin:applications')
+				- addResource('Admin:participation')
+				# user menu
+				- addResource('User:default')
+				- addResource('User:messageBox')
+				- addResource('User:events')
+				- addResource('User:personal')
+				- addResource('User:payments')
+				- addResource('User:credit')
+				- addResource('User:orders')
+				- addResource('User:microPayments')
+				- addResource('User:data')
+				- addResource('User:profile')
+				# homepage
+				- addResource('Articles:default')
+				- addResource('Articles:showArticle')
+				
+				- allow('member', 'User:default')
+				- allow('member', 'User:messageBox')
+				- allow('member', 'User:events')
+				- allow('member', 'User:personal')
+				- allow('member', 'User:payments')
+				- allow('member', 'User:credit')
+				- allow('member', 'User:orders')
+				- allow('member', 'User:microPayments')
+				- allow('member', 'User:data')
+				- allow('member', 'User:profile')
+
+				- allow('member', 'Club:default')
+				- allow('member', 'Club:walls')
+				- allow('member', 'Club:forum')
+				- allow('member', 'Club:members')
+				- allow('member', 'Club:calendar')
+				- allow('member', 'Club:trainingParticipation')
+				- allow('member', 'Club:advantages')		
+				- allow('member', 'Club:documents')
+				- allow('member', 'Club:mail')
+
+				- allow('assistant', 'Admin:default')
+				- allow('editor', 'Admin:articles')
+
+				- allow('assistant', 'Admin:default')
+				- allow('assistant', 'Admin:participation', ['create','update'])
+				- allow('assistant', 'Admin:events', 'create')
+				- allow('assistant', 'Admin:microPayments', 'create')
+				- allow('assistant', 'Admin:default')
+				
+				- allow('responsible', 'Admin:gallery', ['create','update'])
+				- allow('responsible', 'Admin:fileAssign', 'create')
+
+				- allow('executable') # all resources are permitted
+
+				- allow('administrator') # all resources are permitted
+		
+		authenticator: florbalMohelnice\Miscellaneous\Authenticator(@userModel,%models.salt%)
+		routerFactory: RouterFactory
+		router: @routerFactory::createRouter
+
+		sessionPanel:
+			class: SessionPanel
+			arguments:
+				- @application
+				- @session
+
+		dbLogger:
+			class:	\florbalMohelnice\Miscellaneous\Logging\DatabaseLogger
+			factory:    \florbalMohelnice\Miscellaneous\Logging\DatabaseLogger::createDatabaseLogger([])
+		fileLogger:
+			class:	\florbalMohelnice\Miscellaneous\Logging\FileLogger
+			factory:    \florbalMohelnice\Miscellaneous\Logging\DatabaseLogger::createFileLogger([])
+		logging:
+			class:	\florbalMohelnice\Miscellaneous\Logging\LogManager
+			factory:    \florbalMohelnice\Miscellaneous\Logging\DatabaseLogger::createLogManager(@dbLogger, @fileLogger)
+
+		userModel:		florbalMohelnice\Models\UserModel(@dibi.connection)
+		paymentModel:		florbalMohelnice\Models\PaymentModel(@dibi.connection)
+		microPaymentModel:	florbalMohelnice\Models\MicroPaymentModel(@dibi.connection)
+		creditModel:		florbalMohelnice\Models\CreditModel(@dibi.connection)
+		seasonsModel:		florbalMohelnice\Models\SeasonsModel(@dibi.connection)
+		privateMessagesModel:	florbalMohelnice\Models\PrivateMessagesModel(@dibi.connection)
+		ordersModel:		florbalMohelnice\Models\OrdersModel(@dibi.connection)
+		wallsModel:		florbalMohelnice\Models\WallsModel(@dibi.connection)
+		groupsModel:		florbalMohelnice\Models\GroupsModel(@dibi.connection)
+		articlesModel:		florbalMohelnice\Models\ArticlesModel(@dibi.connection)
+		eventsModel:		florbalMohelnice\Models\EventsModel(@dibi.connection)
+		forumModel:		florbalMohelnice\Models\ForumModel(@dibi.connection)
+		fileModel:		florbalMohelnice\Models\FilesModel(@dibi.connection)
+		staticPageModel:	florbalMohelnice\Models\StaticPageModel(@dibi.connection)
+		participationModel:	florbalMohelnice\Models\ParticipationModel(@dibi.connection)
+		seasonApplicationsModel:    florbalMohelnice\Models\SeasonApplicationsModel(@dibi.connection)
+
+	factories:
+
+		
+
+production < common:
+	#dibi:
+	#	host: wm21.wedos.net
+	#	username: a14936_new
+	#	password: Fk48XRgU
+
+	#	host: 127.0.0.1
+	#	username: root
+	#	password: 
+		
+development < common:
+	dibi:
+	#	host: wm21.wedos.net
+	#	username: a14936_new
+	#	password: Fk48XRgU
+
+		host: 127.0.0.1
+		username: root
+		password: 880609Fuca

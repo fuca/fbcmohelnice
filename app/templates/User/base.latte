@@ -1,0 +1,13 @@
+{layout ../base.latte}
+{var robots => noindex}
+{block #side}left{/block}
+
+{block #sideBlock}
+	{control userMenu:contentMenu}
+	{include #subMenu}
+{/block}
+	
+{block #mainBlock}
+	{include #userContent}
+{/block}
+{block #breadcrumbs}/ <a href="{plink User:default}">Člen</a> {/block}

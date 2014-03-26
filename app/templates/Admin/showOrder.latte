@@ -1,0 +1,45 @@
+{layout base.latte}
+{block #title}
+    Detail objednávky 
+    | Správa objednávek 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent}
+	/ <a href="{plink Admin:orders}">Správa objednávek</a> 
+	/ Detail objednávky
+{/block}
+
+{block #subMenu}
+    {if $order}
+	{var $state = $order['state']}
+	<div class="submenu">
+	    <ul>
+		<li class="title">/ Možnosti</li>
+		{if $state != 'sol'}
+		    {if $editPermit} 
+			    {if $state == 'req'}
+				    <li><a href="{link setOrderState!, 'inp',$order['id']}">Řešit</a></li>
+			    {elseif $state == 'inp'}
+				    <li><a href="{link setOrderState!, 'sol', $order['id']}">Dokončit</a></li>
+			    {/if}
+		    {/if}
+		{else}
+		    <li class="title" id="order-solved" style="background-color:green">Objednávka vyřešena</li>
+		{/if}
+		<li><a href="{plink Admin:orders}">Zpět</a></li>
+	    </ul>
+	</div>
+    {/if}
+{/block}
+
+{block #adminContent}
+<h2>Detail objednávky</h2>
+{if $order}
+	{*if $order['state'] == 'sol'}
+		Vyřešeno
+	{/if*}
+	{control editOrderForm}
+{/if}
+{/block}

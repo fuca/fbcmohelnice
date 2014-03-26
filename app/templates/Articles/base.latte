@@ -1,0 +1,21 @@
+{layout ../base.latte}
+{var robots => index}
+{block #side}left{/block}
+{block #title}
+    Články
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    / <a href="{plink Articles:default}">Články</a>
+{/block}
+
+{block #sideBlock}
+    {control categoriesMenu:contentMenu}
+{/block}
+
+{block #mainBlock}
+    {include #articlesContent}
+{/block}
+
+

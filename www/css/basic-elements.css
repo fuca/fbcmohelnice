@@ -1,0 +1,110 @@
+
+
+/* ===================================
+   GLOBAL ITEMS
+   ===================================*/
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a { text-decoration: none; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover { text-decoration: underline; }
+
+h2 strong { color: #0d62e1; }
+strong.blue { color: #105ac9; }
+
+a, a:visited {
+  color: #105ac9;
+  text-decoration: underline;
+}
+
+a:active, a:hover { text-decoration: none; }
+
+
+/* ===================================
+   ZBARVENI PODLE AKTIVNI SEKCE 
+   ===================================*/
+
+body.homepage a, body.homepage a:visited {
+  color: #105ac9;
+  xtext-decoration: underline;
+}
+
+body.public a, body.public a:visited {
+  color: #105ac9;
+  text-decoration: underline;
+}
+
+body.club #sectionbar { background: #D7060C; }
+body.club a, body.club a:visited {
+  color: #D7060C;
+  text-decoration: underline;
+}
+
+body.admin #sectionbar { background: #CC00CC; }
+body.admin a, body.admin a:visited {
+  color: #CC00CC;
+  text-decoration: underline;
+}
+
+body.user #sectionbar { background: #F97A09; }
+body.user a, body.user a:visited {
+  color: #F97A09;
+  text-decoration: underline;
+}
+
+
+/* ===================================
+   BREADCRUMB 
+   ===================================*/
+
+
+#content .breadcrumb-top {
+  padding: 5px 0px 20px 0;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.breadcrumb-bottom {
+  clear: both;
+  margin: 25px 0 10px 0;
+  padding: 10px 10px 10px 5px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.breadcrumb-bottom a, .breadcrumb-top a {
+  padding: 0 5px;
+  color: #555;
+}
+
+.breadcrumb-bottom a.home, .breadcrumb-top a.home {
+  margin-right: 8px;
+  padding: 5px 7px 5px 10px;
+  background: transparent url('../img/homeicon.png') no-repeat center left; 
+  text-decoration: none; 
+}
+
+
+.breadcrumb-bottom a:hover.home, .breadcrumb-top a:hover.home {
+  background: transparent url('../img/homeicon.png') no-repeat center right;
+    text-decoration: none; 
+}
+
+.breadcrumb-bottom span {
+  float: right;
+}
+
+
+/* ===================================
+   FOOTER 
+   ===================================*/
+   
+#footer h2 { color: #ccc; }
+#footer h2 strong { color: #3866FE; }
+#footer .wrapper { background: transparent; }

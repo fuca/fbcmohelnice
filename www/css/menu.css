@@ -1,0 +1,349 @@
+
+ul{list-style:none;}
+
+/* Mega Menu Styles */
+.publicmenu ul, .publicmenu ul li {list-style: none;}
+.publicmenu ul {position: relative; padding: 0; margin: 0;}
+.publicmenu ul li ul {display: none;}
+.publicmenu .sub {display: none;}
+.publicmenu .sub ul {display: block;}
+
+ul.publicmenu, 
+ul.publicmenu, 
+ul.publicmenu li {
+  margin: 0; 
+  padding: 0; 
+  border: none;
+}
+
+ul.publicmenu { position: relative; }
+
+ul.publicmenu li {
+  float: left; 
+  margin: 0; 
+  padding: 0; 
+}
+
+ul.publicmenu li a {
+  font-size: 1.05em;
+  float: left; 
+  display: block; 
+  color: #333; 
+  padding: 10px 0;
+  width: 121px;
+  margin: 5px 0 5px -1px; 
+  text-decoration: none;
+  text-align: center;
+  height: 18px;
+  border-right: 1px solid #aaa;
+}
+
+#publicmenu-container ul li a { color: #333; }
+
+#publicmenu-container ul li a:hover,  
+#publicmenu-container ul li a:active, 
+#publicmenu-container ul li a.active, 
+#publicmenu-container ul.publicmenu li.mega-hover a { color: #fff; }
+
+#publicmenu-container ul.publicmenu li.first a {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  width: 122px;
+}
+
+#publicmenu-container ul.publicmenu li.last a { 
+  border: none;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+
+ul.publicmenu li.mega-hover a,
+ul.publicmenu li a:hover {
+  background: #555;
+  color: #fff; 
+  text-shadow: none;
+  margin: 0px 0 0 -1px;
+  padding: 15px 0;
+  width: 121px;
+}
+
+
+ul.publicmenu li .sub-container {
+  position: absolute; 
+}
+
+/*toto je podmenu*/
+ul.publicmenu li .sub {  
+  top: 0px;
+  background: #555;
+  padding: 5px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* odkaz podmenu */
+#publicmenu-container ul.publicmenu li.dc-mega-li div.sub-container li a {
+  color: #ddd;
+  border: none;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+/* aktivni odkaz podmenu */
+#publicmenu-container ul.publicmenu li.dc-mega-li div.sub-container li a:hover, 
+#publicmenu-container ul.publicmenu li.dc-mega-li div.sub-container li a:active, 
+#publicmenu-container ul.publicmenu li.dc-mega-li div.sub-container li a.active, 
+#publicmenu-container ul.publicmenu li.dc-mega-li div.sub-container li.mega-hocver a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+body.page ul.publicmenu li .sub { 
+  background: #fff;
+}
+
+ul.publicmenu li .sub .row { /*toto je radek podmenu*/
+  width: 100%; 
+  overflow: hidden; 
+  clear: both;
+
+}
+ul.publicmenu li .sub li {   /*toto je polozka podmenu*/
+  list-style: none; 
+  float: none; 
+  width: 160px; 
+  font-size: 1em; 
+  font-weight: normal;
+  xborder: 1px solid red;
+}
+ul.publicmenu li .sub li.mega-hdr { /*jednotlive sloupce podmenu */
+  float: left; 
+}
+ul.publicmenu li .sub li.mega-hdr.last {
+  margin-right: 0; 
+}
+ul.publicmenu li .sub li.mega-hdr a {  /*odkaz polozky podmenu*/
+  background: none; 
+  text-shadow: none; 
+  color: #111; 
+  display: block; 
+  float: none; 
+  text-decoration: none; 
+  padding: 3px;
+  margin: 0px;
+}
+
+ul.publicmenu li .sub li.mega-hdr a.mega-hdr-a {  /*nadpis sloupce podmenu*/     
+  font-size: 0.95em;   
+  text-transform: uppercase; 
+  font-weight: bold; 
+  color: #000;
+  margin-bottom: 5px;
+  border: 1px solid blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+#usermenu {
+  color: #555555;
+}
+
+#usermenu .menu {
+  float: right;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+#usermenu ul li {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+#usermenu li a {
+  padding: 7px 10px;
+  background-color: #0758d1;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+#usermenu li.mail a {
+  background: #ccc url('../img/mail-icon.png') no-repeat center left;
+  padding-left: 40px;
+  color: #000;
+}
+
+#usermenu li.mail ul li a { 
+  background: #ccc;
+  padding-left: 7px;
+}
+
+#usermenu ul li.mail ul { background: #ccc; }
+#usermenu li.club a, #usermenu ul li.club ul  { background-color: #D7060C; }
+#usermenu li.admin a, #usermenu ul li.admin ul { background-color: #CC00CC; }
+#usermenu li.user a, #usermenu ul li.user ul { background: #F97A09; }
+
+
+#usermenu li a:hover {
+  text-decoration: underline;
+}
+
+#usermenu .search {
+  float: right;
+  clear: both;
+}
+
+#usermenu .search input.textfield {
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 25px;
+  width: 200px;
+}
+
+#usermenu .search input.button {
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 29px;
+  padding: 0 10px;
+  background-color: #ddd;
+  width: 80px;
+  margin-left: 15px; 
+}
+
+
+/*-podmenu minimenu--*/
+
+
+
+#usermenu ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 160px;
+  visibility:hidden;
+  opacity:0;
+  transition: visibility 0.3s linear 0s, opacity 0.3s linear 0s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 100;
+}
+#usermenu ul li ul li { 
+ 
+  display: block; 
+  color: #fff;
+  float: none;
+  margin: 0;
+  padding: 0 3px;
+}
+
+#usermenu li ul li a {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 7px;
+}
+
+#usermenu ul li:hover ul {
+  display: block;
+  visibility:visible;
+  opacity:1;
+}
+
+
+
+
+
+
+/* CONTENT MENU */
+
+
+#content .menu, #content .submenu {
+  width: 250px;
+  margin-bottom: 20px;
+  background: #fafafa url('../img/bg_header.png') repeat-x top;
+  border: 1px solid #bbb;
+  border-bottom: none;
+}
+
+#content .menu ul, #content .submenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#content .menu li.title, #content .submenu li.title {
+  color: #fff;
+  padding: 10px 15px; 
+  font-size: 1.25em;
+  font-weight: normal;
+  margin: -1px -1px 5px -1px;
+}
+
+#content .menu li.title { background-color: #0758d1; }
+#content .submenu li.title { background-color: #555; }  
+
+#content .menu ul.club li.title { background-color: #D7060C; }
+#content .menu ul.admin li.title { background-color: #CC00CC; }
+#content .menu ul.user li.title { background-color: #F97A09; }
+
+
+#content .menu li a, #content .submenu li a {
+  color: #222;
+  display: block;
+  padding: 7px 10px 5px 10px;
+  border-bottom: 1px solid #bbb;
+  border-left: 10px solid transparent;
+  text-decoration: none;
+}
+
+#content .menu li a:hover, #content .menu li a.active, #content .submenu li a:hover, #content .submenu li a.active {
+  background: #eee; 
+  border-left: 10px solid #105ac9;
+  color: #000;
+} 
+
+#content .menu li a.active, #content .submenu li a.active {
+  font-weight: bold;
+}
+
+#content .menu ul.club li a:hover, #content .menu ul.club li a.active { border-left: 10px solid #D7060C; } 
+#content .menu ul.admin li a:hover, #content .menu ul.admin li a.active { border-left: 10px solid  #CC00CC; }  
+#content .menu ul.user li a:hover, #content .menu ul.user li a.active { border-left: 10px solid #F97A09; }  
+#content .submenu ul li a:hover, #content .submenu ul li a.active { border-left: 10px solid #555; } 
+ 
+#content .menu ul.user a strong { color: red; } 
+
+ 
+#content .menu li ul li a, #content .submenu li ul li a {
+  padding: 7px 10px 5px 20px;
+}
+
+#content .menu li ul li ul li a, #content .submenu li ul li ul li a {
+  padding: 7px 10px 5px 30px;
+}

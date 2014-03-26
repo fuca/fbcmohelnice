@@ -1,0 +1,13 @@
+<ul>
+	{block #head-menu}
+		{foreach $nodes as $node}
+			<li><a href="{if $node->mode} {plink $node->url} {else} {$node->url}{/if}">{$node->label}</a></li>
+				{if count($node->getComponents()) > 0}
+					<ul>
+					{include #head-menu, nodes => $node->getComponents()}
+					</ul>
+				{/if}
+		{/foreach}
+	
+	{/block}
+</ul>

@@ -1,0 +1,19 @@
+{layout ./base.latte}
+{block #title}Nová objednávka | {include #parent}{/block}
+{block #breadcrumbs}
+    {include #parent} 
+    / <a href="{plink User:orders}">Objednávky</a> 
+    / Nová objednávka
+{/block}
+{block #subMenu}
+    <div class="submenu">
+            <ul>
+                    <li class="title">/ Možnosti</li>
+                    <li><a href="{plink User:orders}">Zpět</a></li>
+            </ul>
+    </div>
+{/block}
+{block #userContent}
+<h2>Nová objednávka</h2>
+{control orderForm}
+{/block}

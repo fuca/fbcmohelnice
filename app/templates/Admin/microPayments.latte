@@ -1,0 +1,30 @@
+{layout base.latte}
+{block #title}
+    Správa mikro plateb 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Správa mikroplateb
+{/block}
+
+{block #subMenu}
+
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		{if $addPermit}
+		    <li><a href="{link addMicroPayment}">Nová mikroplatba</a></li>
+		{/if}
+		<li><a href="{plink Admin:default}">Zpět</a></li>
+	</ul>
+</div>
+
+
+{/block}
+
+{block #adminContent}
+    <h2>Správa mikroplateb</h2>
+    {control microPaymentsGrid}
+{/block}

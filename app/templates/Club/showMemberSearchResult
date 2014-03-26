@@ -1,0 +1,18 @@
+{layout base.latte}
+{block #title}| IS | Výsledek hledání{include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Výsledek hledání{/block}
+{block #subMenu}{/block}
+{block #clubContent}
+<h2>Výsledek hledání</h2>
+{if $data}
+<ul>
+	{foreach $data as $d}
+<li>{$d->name}</li>
+	{/foreach}
+</ul>
+
+{else}
+	Nic nenalezeno.
+{/if}
+
+{/block}

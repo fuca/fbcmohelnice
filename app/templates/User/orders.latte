@@ -1,0 +1,17 @@
+{layout ./base.latte}
+{block #title}Objednávky | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Objednávky{/block}
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		<li><a href="{plink User:newOrder}">Vytvořit objednávku</a></li>
+                <li><a href="{plink User:default}">Zpět</a></li>
+	</ul>
+</div>
+{/block}
+
+{block #userContent}
+<h2>Objednávky</h2>
+{control myOrdersGrid}
+{/block}

@@ -1,0 +1,26 @@
+{layout base.latte}
+{block #title}
+    Nová přihláška člena {if $user != NULL}{$user->name} {$user->surname} ({$user->kid}){else} ? {/if}
+    | Správa přihlášek 
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+/ <a href="{plink Admin:userApplications $user->kid}">Správa přihlášek člena {if $user != NULL}{$user->name} {$user->surname} ({$user->kid}){else} ? {/if}</a>
+/ Nová přihláška
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+    <ul>
+	<li class="title">/ Možnosti</li>
+	<li><a href="{plink Admin:userApplications $user->kid}">Zpět</a></li>
+    </ul>
+</div>
+{/block}
+
+{block #adminContent}
+    <h2>Nová přihláška člena {if $user != NULL}{$user->name} {$user->surname} ({$user->kid}){else} ? {/if}</h2>
+    {control createApplicationForm}
+{/block}

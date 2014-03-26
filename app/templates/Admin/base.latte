@@ -1,0 +1,23 @@
+{layout ../base.latte}
+{var robots => noindex}
+{block #side}left{/block}
+{block #title}Administrační sekce | {include #parent}{/block}
+
+{block #sideBlock}
+	{control adminMenu:contentMenu}
+	{include #subMenu}
+{/block}
+	
+{block #mainBlock}
+	{include #adminContent}
+{/block}
+{block #breadcrumbs}
+    /<a href="{plink Admin:default}">Admin</a>
+{/block}
+	
+
+
+
+
+
+

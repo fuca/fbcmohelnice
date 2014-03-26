@@ -1,0 +1,24 @@
+{layout base.latte}
+{block #title}
+    Přidělit kredity | Správa kreditů | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+/ <a href="{plink Admin:credits}">Správa kreditů</a>
+/ Přidělit kredity
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		<li><a href="{plink Admin:credit}">Zpět</a></li>
+	</ul>
+</div>
+{/block}
+
+{block #adminContent}
+    <h2>Přidělit kredity</h2>
+    {control addCreditEntryForm}
+{/block}

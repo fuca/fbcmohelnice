@@ -1,0 +1,38 @@
+{layout base.latte}
+{if $title == ""}{var tititle => "Vlákna všech fór"} {else} {var tititle => "Fórum ". $title} {/if}
+
+{block #title}
+    {$tititle}
+    | {include #parent}
+{/block}
+    
+{block #breadcrumbs}
+    {include #parent} 
+    / {$tititle}
+    {/block}
+
+{block #subMenu}
+    {control categoriesMenu:contentMenu "submenu"}
+    <div class="submenu">
+	
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Club:default}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #clubContent}
+
+<h2>{$tititle}</h2>
+
+{if $forums !== FALSE}
+	{foreach $forums as $f}
+		<br/>
+		<a href="{plink Club:forumThread $f->id_forum, $abbr}">{$f->title}</a>
+		<br/>{$f->description}  {$f->update_time|date:'%d.%m.%Y'}
+	{/foreach}
+{else}
+	Nic nenalezeno
+{/if}
+{/block}

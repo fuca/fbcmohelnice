@@ -1,0 +1,11 @@
+zvazit evidenci roli v configu a ne v databazi, at se takova picovinka nemusi tahat z db
+zalozit tabulku typu zaplaceni platby
+logovat chybu v userformu
+
+pridat tabulku sezon
+
+refactor modeluuu (hlavne ) a formuuuu
+	ke kazdemu vyhozeni vyjimku pridat logovani
+
+userExistp - da se to udelat jinak?
+getUsers v UserModel predelat..

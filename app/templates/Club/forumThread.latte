@@ -1,0 +1,31 @@
+{layout base.latte}
+{if $title == ""}{var tititle => "Vlákna všech fór"} {else} {var tititle => "Fórum ". $title} {/if}
+{block #title}{$tititle} | {include #parent}{/block}
+{block #breadcrumbs}
+	{include #parent} 
+	/ <a href="{link Club:forum $abbr}">{$tititle}</a>
+	/ {$forum->title}
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Club:forum $abbr}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #clubContent}
+    <h2>{$forum->title}</h2>
+    <p>
+	{$forum->description}
+    </p>
+
+    {if $forum->comment_mode == florbalMohelnice\Entities\Forum::COMMENTS_LOGGED}
+	{control forumComments}
+	{control forumComments:form}
+    {else}
+	Toto vlákno je uzamčeno
+    {/if}
+{/block}

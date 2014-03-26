@@ -1,0 +1,10 @@
+<fieldset>
+    <legend><i>Této akce se účastnilo <strong>{$count}</strong> členů</i></legend> 
+    <ul>
+	{foreach $going as $u}
+	    <li>
+		{$u->name} {if $admin} <a href="{link removeParticipation!, id_event => $idEvent, kid => $u->kid}">x</a>{/if}
+	    </li>
+	{/foreach}
+    </ul>
+</fieldset>

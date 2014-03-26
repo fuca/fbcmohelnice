@@ -1,0 +1,270 @@
+
+
+#content .main-box p {
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+#content .main-box img.lulu {
+  width: 690px;
+}
+
+#content .main-box .ainfo {
+  background: #edeff4;
+  padding: 10px 10px;
+  margin: 10px 0;
+  color: #555; 
+}
+
+#content .main-box .ainfo .fb-like {;
+  float: right;
+}
+
+#content .main-box .aauthor {
+  background: #edeff4 url('../img/juna-article.png') no-repeat center right;
+  background-size: 230px;
+  height: 110px;
+  padding: 15px 20px;
+  margin: 20px 0 40px 0;
+  line-height: 1.9em;
+}
+
+#content .main-box .aauthor h4 {
+  font-size: 1.2em; 
+}
+
+#content .main-box .aauthor p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.8em; 
+}
+
+#content .main-box .comment_form { margin: 10px 0; }
+
+#content .main-box .comment_form form input.submit {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  margin-top: 10px;
+  position: relative;
+}
+
+#content .main-box .comment_form textarea { 
+  width: 685px; 
+  border: 1px solid #ccc; 
+  height: 80px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  resize: vertical;
+}
+
+
+
+#content .main-box .comment {
+  line-height: 1.8em; 
+  background: #fafafa url('../img/bg_header.png') repeat-x top;
+  height: 110px;
+  padding: 15px 20px;
+  margin: 20px 0;
+}
+
+#content .main-box .comment h4 { font-size: 1.1em; }
+#content .main-box .comment h4 span { float: right; }
+
+
+
+
+
+span.published {
+  background: transparent url('../img/maintheme_icon_cal.png') no-repeat center left;
+  padding-left: 25px;
+
+}
+span.group {
+  background: transparent url('../img/maintheme_icon_group.png') no-repeat center left;
+  padding-left: 25px;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+.homepage #content .right-box-wrapper {
+  float: right;
+}
+
+.homepage #content .right-box {
+  width: 260px;
+  background: #fafafa url('../img/bg_header.png') repeat-x top center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+
+.homepage #content .right-box-wrapper div.social {
+  height: 80px;
+}
+
+.homepage #content .right-box-wrapper div.social a {
+  display: block;
+  width: 60px;
+  background-size: 60px 60px;
+  float: left;
+  height: 60px;
+  margin: 0 5px 15px 5px;
+}
+
+.homepage #content .right-box-wrapper div.social a.facebook { background: transparent url('../img/ico/facebook-icon.png') no-repeat top center; }
+.homepage #content .right-box-wrapper div.social a.twitter { background: transparent url('../img/ico/twitter-icon.png') no-repeat top center; }
+.homepage #content .right-box-wrapper div.social a.vimeo { background: transparent url('../img/ico/vimeo-icon.png') no-repeat top center; }
+.homepage #content .right-box-wrapper div.social a.youtube { background: transparent url('../img/ico/youtube-icon.png') no-repeat top center; }
+
+.homepage #content .right-box-wrapper div.social a.facebook, .homepage #content .right-box-wrapper div.social a.twitter, 
+.homepage #content .right-box-wrapper div.social a.vimeo, .homepage #content .right-box-wrapper div.social a.youtube { background-size: 60px auto; }
+
+.homepage #content .right-box-wrapper div.social a:hover.facebook, .homepage #content .right-box-wrapper div.social a:hover.twitter, 
+.homepage #content .right-box-wrapper div.social a:hover.vimeo, .homepage #content .right-box-wrapper div.social a:hover.youtube { background-position: bottom center; }
+
+.homepage #content .right-box-wrapper .banner {
+  background: #fafafa url('../img/wfc.jpg') repeat-x top center;
+  background-size: 280px auto; 
+  height: 140px;
+  margin-bottom: 20px;  
+}
+
+.homepage #content #map {
+  width: 280px;
+  background: transparent url('../img/map.png') no-repeat top center;
+  margin: -20px 0 0 0;
+  padding: 0px;
+  height: 201px;
+}
+
+.homepage #content .news-box {
+  background: #fafafa url('../img/bg_header.png') repeat-x top center;
+  width: 668px;
+  height: 375px;
+  xborder: 1px solid #ccc;
+  overflow: hidden;
+  margin: 5px 10px 10px 0;
+  xpadding: 15px;
+}
+
+.homepage #content .article-box {
+  xheight: 1475px;
+  width: 675px;
+  overflow: hidden;
+}
+
+
+.homepage #content div.article-wrapper {
+  float: left;
+  background: transparent url('../img/banner01.jpg') no-repeat top center;
+  background-size: 500px auto;  
+  width: 330px;
+  border: 1px solid #ccc;
+  margin: 0 5px 5px 0;
+}
+
+.homepage #content div.article {
+  xbackground: rgb(0, 0, 0);
+  xbackground: rgba(0, 0, 0, 0.6);
+  background-color: #222;
+  margin: 0;
+  padding: 5px 10px;
+  margin-top: 185px;
+  xbordeR: 1px solid red;
+  xfont-size: 0.9em;
+}
+
+.homepage #content a:hover div.article {
+  background-color: #111;
+}
+
+.homepage #content .article-wrapper a, .homepage #content .article-wrapper a:hover, .homepage #content .article-wrapper {
+  color: #fff;
+  text-decoration: none;
+}
+
+.homepage #content .article h3 {
+  margin: 0;
+  padding: 5px 0 10px 0;
+  font-size: 1.3em;
+}
+.homepage #content .article p {
+  padding: 10px 0 5px 0;
+  margin: 0;
+  line-height: 1.25em;
+  color: #ddd;
+}
+
+.homepage #content .article span, .homepage #content .article span a {
+  color: #ddd;
+}
+
+
+div.right-box div.twitter {
+ xpadding-top: 10px;
+}
+
+div.right-box div.twitter  p {
+  margin: 0;
+  padding: 10px 5px 0 5px;
+  background: transparent url('../img/twitter_icon_small.png') no-repeat left center;
+  padding-left: 40px;
+  border-bottom: 1px solid #eee;
+  xborder: 1px solid blue;
+}
+
+div.right-box div.twitter div.follow {
+  margin: 20px 0 10px 0;
+}
+
+div.right-box div.twitter div.follow a {
+  padding: 7px 10px;
+  xborder: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #317def;
+  color: #fff;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+div.right-box div.twitter div.follow a:hover {
+  text-decoration: underline;
+}
+
+div.right-box div.twitter  p small {
+  line-height: 2.5em;
+}
+
+
+
+div.fb-like-box {
+  background: transparent url('images/facebook.png') no-repeat top right;
+  background-size: 350px;
+}
+
+div.fb-wrapper {
+  display: inline-block;
+  position: relative; 
+  xclear: both; 
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px 0 10px 0;
+  background: #fafafa url('../img/bg_header.png') repeat-x top center;
+}
+
+
+html#facebook body div.pluginSkinLight div.pam  {
+  font-family: 'Open Sans',arial,sans-serif; !important
+
+}

@@ -1,0 +1,17 @@
+{layout base.latte}
+{block #title}Nový článek | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / <a href="{plink Admin:articles}">Správa článků</a> / <a href="{plink Admin:addArticle}">Přidat článek</a>{/block}
+	
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		<li><a href="{plink Admin:addArticle}">Přidat článek</a></li>
+		<li><a href="{plink Admin:articles}">Zpět</a></li>
+	</ul>
+</div>
+{/block}
+
+{block #adminContent}
+<h2>Přidat článek</h2>
+{control addArticleForm}

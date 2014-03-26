@@ -1,0 +1,28 @@
+{layout ./base.latte}
+{block #title}Nová zpráva | {include #parent}{/block}
+{block #breadcrumbs}
+    {include #parent}
+    / <a href="{plink User:messageBox}">Zprávy</a>
+    / Nová zpráva
+{/block}
+
+{block #subMenu}
+<div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink User:createMessage}">Nová zpráva</a></li>
+	    <li><a href="{plink User:inbox}">Příchozí</a></li>
+	    <li><a href="{plink User:outbox}">Odchozí</a></li>
+	    <li><a href="{plink User:deleted}">Smazané</a></li>
+            <li><a href="{plink User:inbox}">Zpět</a></li>
+
+	</ul>
+</div>
+{/block}
+
+{block #userContent}
+<h2>Nová zpráva</h2>
+{control messageForm}
+{/block}
+
+

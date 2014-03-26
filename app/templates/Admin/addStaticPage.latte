@@ -1,0 +1,26 @@
+{layout base.latte}
+{block #title}
+    Nová statická stránka
+    | Správa statických stránek
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+	{include #parent} 
+	/ <a href="{plink Admin:staticPages}">Správa statických stránek</a>
+	/ Nová statická stránka
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	    <ul>
+		    <li class="title">/ Možnosti</li>
+		    <li><a href="{plink Admin:staticPages}">Zpět</a></li>
+	    </ul>
+    </div>
+{/block}
+
+{block #adminContent}
+<h2>Nová statická stránka</h2>
+{control addPageForm}
+{/block}

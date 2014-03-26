@@ -1,0 +1,49 @@
+{layout base.latte}
+{block #title}
+    Úprava sezóny
+    | {include #parent}
+{/block}
+
+{block #breadcrumbs}
+    {include #parent} 
+    / Úprava sezóny
+{/block}
+
+{block #subMenu}
+    <div class="submenu">
+	<ul>
+	    <li class="title">/ Možnosti</li>
+	    <li><a href="{plink Admin:season}">Zpět</a></li>
+	</ul>
+    </div>
+{/block}
+
+{block #adminContent}
+    <h2>Úprava sezóny <strong>{$label}</strong></h2>
+    {form updateSeasonForm}
+	<table>
+	    <tr><th>Od</th><th>Do</th></tr>
+	    <tr><td>{input date_from}</td><td>{input date_to}</td></tr>
+	</table>    
+	<table>
+	    <tr><th></th><th>Kredity</th><th></th><th>ČLP</th></tr>
+	    {foreach $form->getComponent('common')->getControls() as $row}
+		{if $iterator->isOdd()}
+		    <tr>
+		{/if}
+		    <td><strong>{$row->label}</strong></td>
+		    <td>{$row->control}</td>
+		{if $iterator->isEven()}
+		    </tr>
+		{/if}
+	    {/foreach}
+	<table>
+	    <tr><td>{label active/}</td><td>{input active}</td></tr>
+	</table>
+	</table>
+	<table>
+	    <tr><td>{input comment}</td></tr>
+	    <tr><td>{input save}</td></tr>
+	</table>
+    {/form}
+{/block}

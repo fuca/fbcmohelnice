@@ -1,0 +1,11 @@
+<div class="comment_form">
+{form commentForm}
+    
+<ul class="errors" n:if="$form->hasErrors()">
+        <li n:foreach="$form->errors as $error">{$error}</li>
+</ul>
+    {input content}
+</tr>
+    {input add}
+{/form}
+</div>

@@ -1,0 +1,22 @@
+{layout base.latte}
+{block #title}Můj profil | {include #parent}{/block}
+{block #breadcrumbs}{include #parent} / Profil uživatele {/block}
+{block #subMenu}
+<div class="submenu">
+	<ul>
+		<li class="title">/ Možnosti</li>
+		<li><a href="{plink User:editProfile}">Upravit profil</a></li>
+                <li><a href="{plink User:default}">Zpět</a></li>
+	</ul>
+</div>
+{/block}
+
+{block #userContent}
+{if $data != NULL }
+	{foreach $data as $d}
+	{if $d != NULL}</br>{$d}{/if}
+	{/foreach}
+{else}
+	</br>Prázdno
+{/if}
+{/block}
